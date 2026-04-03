@@ -52,7 +52,7 @@ class MistralProvider(BatchProvider):
 
             # Check if we should use inline batching or file batching
             # Mistral supports inline batching for < 10k requests
-            if len(requests) < 10000:
+            if False:  # len(requests) < 10000:
                 logger.debug(f"Using inline batching for {len(requests)} requests")
                 # Use inline batching
                 batch_job = client.batch.jobs.create(
